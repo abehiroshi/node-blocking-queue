@@ -1,0 +1,36 @@
+{
+  "name": "blocking-queue",
+  "version": "0.0.1",
+  "description": "blocking-queue",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhrsh/node-blocking-queue.git"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib --source-maps-inline --plugins object-assign",
+    "test": "mocha --compilers js:./test/mocha-compiler test/**/*_spec.js",
+    "karma": "karma start"
+  },
+  "author": "Abe Hiroshi",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.5",
+    "babel-core": "^5.8.20",
+    "babel-plugin-espower": "^1.0.0",
+    "babel-plugin-object-assign": "^1.2.1",
+    "babelify": "^6.1.3",
+    "karma": "^0.13.3",
+    "karma-babel-preprocessor": "^5.2.1",
+    "karma-browserify": "^4.2.1",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-espower-preprocessor": "0.0.4",
+    "karma-mocha": "^0.2.0",
+    "karma-mocha-reporter": "^1.0.4",
+    "mocha": "^2.2.5",
+    "power-assert": "^0.11.0"
+  },
+  "files": [
+    "lib"
+  ]
+}
