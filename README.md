@@ -21,6 +21,8 @@ var q = new Queue();
 q.push('task1');
 q.push('task2');
 q.push('task3');
+q.push('task4');
+q.push('task5');
 
 var c = new QueueConsumer(q);
 c.start(function(task){
@@ -28,35 +30,36 @@ c.start(function(task){
     // working on task
     resolve();
   });
-}, 5);
+}, 2);
+
 c.end().then(function(){
-  // on done all tasks
+  // on all tasks done
 });
 ```
 
-API Ref
+API
 -------
 
-### new Queue()
+#### new Queue()
 
-### Queue.push(task)
+#### Queue.push(task)
+ - **task** {Object} *required*
 
-   - **task**, *mixed, required*
+#### Queue.pop()
+ - return {Promise}
 
-### Queue.pop() : Promise
+#### Queue.size()
+ - return {integer}
 
-### Queue.size() : integer
+#### new QueueConsumer(queue)
+ - **queue** {Queue} *required*
 
-### new QueueConsumer(queue)
+#### QueueConsumer.start(consumer, [concurrency])
+ - **consumer** {Function} *required* should be called with 1 parameters: task.
+ - **cocurrency** {integer} *optional, default: 1*
 
-- **queue**, *Queue, required*
-
-### QueueConsumer.start(consumer, [concurrency])
-
-   - **consumer**, *function, required* should be called with 1 parameters: task.
-   - **cocurrency**, *integer, optional, default: 1*
-
-### QueueConsumer.end() : Promise
+#### QueueConsumer.end()
+ - return {Promise}
 
 License
 -------
