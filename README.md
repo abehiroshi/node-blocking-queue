@@ -3,6 +3,8 @@ Blocking Queue
 
 Bloking FIFO queue and flow control using Promise.
 
+blocking-queue [![npm version](https://badge.fury.io/js/blocking-queue.svg)](http://badge.fury.io/js/blocking-queue)
+
 Installation
 -------
 
